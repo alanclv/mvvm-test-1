@@ -10,7 +10,7 @@
     <Grid>
         <TextBox Text="{Binding Path=FirstName}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="211,127,0,0"/>
         <TextBox Text="{Binding Path=LastName}" HorizontalAlignment="Left" Height="23" Margin="211,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Command="{Binding Path=SubmitCommand}" IsEnabled="{Binding Path=SubmitEnabled}" Content="Submit"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="124,193,0,0" ToolTip="Submit changes to employee name" />
+        <Button Command="{Binding Path=SubmitCommand}" Content="Submit"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="124,193,0,0" ToolTip="Submit changes to employee name" />
         <TextBlock  Text="{Binding Path=EmployeeName}" HorizontalAlignment="Left" Margin="211,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="266" Height="50"/>
         <Label Content="First Name" HorizontalAlignment="Left" Margin="133,127,0,0" VerticalAlignment="Top" Width="78"/>
         <Label Content="Last Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="133,152,0,0"/>
