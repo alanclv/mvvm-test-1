@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Windows.Input;
 using Microsoft.Practices.Prism.Commands;
-//using Microsoft.Practices.Composite.Presentation.Commands;
-
 
 namespace WpfApplication1
 {
@@ -29,14 +25,12 @@ namespace WpfApplication1
         
         private bool CanSubmit(object arg) 
         { 
-            bool test = !(String.IsNullOrEmpty(FirstName) || String.IsNullOrEmpty(LastName));
-            return test; 
+            return !(String.IsNullOrEmpty(FirstName) || String.IsNullOrEmpty(LastName)); 
         }
 
         public EmployeeViewModel()
         {
             this.SubmitCommand = new DelegateCommand<EmployeeViewModel>(this.OnSubmit, this.CanSubmit);
-            SubmitCommand.CanExecuteChanged += tester;
         }
 
         public string EmployeeName
@@ -89,13 +83,6 @@ namespace WpfApplication1
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
             this.SubmitEnabled = this.SubmitCommand.CanExecute(null);
-            SubmitCommand.RaiseCanExecuteChanged();
-            CommandManager.InvalidateRequerySuggested();
-        }
-
-        public void tester(object sender, EventArgs e)
-        {
-            MessageBox.Show("Test worked");
         }
     }
 }

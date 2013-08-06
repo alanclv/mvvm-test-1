@@ -4,42 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Possibly going to try writing this alternate view model using the MVVM Light toolkit later.
+// Apparently RelayCommand raises the CanExecuteChanged event, whereas Prism's 
+// DelegateCommand does not.  
 namespace WpfApplication1
 {
     public class AltEmployeeViewModel
     {
-        //#region Members
-        //private string _afirstName;
+        //private string _firstName;
         //private string _lastName;
-        //private string _employeeName;
-        //#endregion
-
-        //public string Test { get; set; }
-        //public string Aprop { get; set; }
-        //#region Properties
-        //public string AFirstName
-        //{
-        //    get { return _afirstName; }
-        //    set { _afirstName = value; }
-        //}
-
-        //public string LastName
-        //{
-        //    get { return _lastName; }
-        //    set { _lastName = value; }
-        //}
-
-        //public string EmployeeName
-        //{
-        //    get
-        //    {
-        //        return _employeeName;
-        //    }
-        //    set
-        //    {
-        //        _employeeName = value;
-        //    }
-        //}
-        //#endregion
+        //private string _EmployeeName;
     }
 }
