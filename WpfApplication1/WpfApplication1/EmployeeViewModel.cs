@@ -16,8 +16,7 @@ namespace WpfApplication1
         private string _lastName = null;
         public event PropertyChangedEventHandler PropertyChanged;
         public DelegateCommand<EmployeeViewModel> SubmitCommand { get; private set; }
-        public bool SubmitEnabled { get; private set; }
-        
+                
         private void OnSubmit(object arg) 
         { 
             EmployeeName = "Entered employee: " + FirstName + " " + LastName; 
@@ -82,7 +81,7 @@ namespace WpfApplication1
             {
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
-            this.SubmitEnabled = this.SubmitCommand.CanExecute(null);
+            SubmitCommand.RaiseCanExecuteChanged();
         }
     }
 }
